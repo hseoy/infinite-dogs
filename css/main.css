@@ -1,0 +1,121 @@
+/*----------------------------
+  Fonts
+----------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*----------------------------
+  Base
+----------------------------*/
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: "Bebas Neue", cursive, sans-serif;
+}
+
+/*----------------------------
+  Infinite Scroll
+----------------------------*/
+.infinite-wrapper {
+  margin: 30px 30%;
+}
+
+.infinite-wrapper__title {
+  text-align: center;
+  padding: 0 0 10px;
+  letter-spacing: 5px;
+  border-bottom: 3px dotted #000;
+}
+
+.infinite-wrapper__title h1,
+.infinite-wrapper__title h2 {
+  margin: 5px 0;
+}
+
+.infinite-wrapper__title h1 {
+  letter-spacing: 13.5px;
+  padding-left: 13.5px;
+}
+
+.infinite-wrapper__title h2 {
+  font-size: 1.2rem;
+  letter-spacing: 6.4px;
+  padding-left: 6.4px;
+  color: #7e7e7e;
+}
+
+.infinite-wrapper__image-container {
+  -webkit-columns: 3;
+          columns: 3;
+  overflow: hidden;
+}
+
+.infinite-wrapper__image-container a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 5px;
+}
+
+.infinite-wrapper__image-container img {
+  width: 100%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.infinite-wrapper__image-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.infinite-wrapper__loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.infinite-wrapper__loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1680px) {
+  .infinite-wrapper {
+    margin: 30px 25%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .infinite-wrapper {
+    margin: 30px 20%;
+  }
+  .infinite-wrapper__title h1 {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    padding-left: 8px;
+  }
+  .infinite-wrapper__title h2 {
+    font-size: 1rem;
+    letter-spacing: 3.5px;
+    padding-left: 3.5px;
+  }
+  .infinite-wrapper__image-container {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .infinite-wrapper {
+    margin: 30px 10px;
+  }
+}
